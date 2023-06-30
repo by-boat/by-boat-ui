@@ -1,0 +1,69 @@
+{
+  "name": "by-boat-ui",
+  "version": "1.0.1",
+  "description": "A react library developed with dumi",
+  "private": false,
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "dumi dev",
+    "docs:build": "dumi build",
+    "build": "father build",
+    "prepare": "husky install && dumi setup"
+  },
+  "authors": [
+    "318522457@qq.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "React",
+    "dumi",
+    "by-boat-ui",
+    "by-boat",
+    "ui"
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "dumi": "^2.2.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "father": "^4.2.3"
+  }
+}
